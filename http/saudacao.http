@@ -1,0 +1,8 @@
+GET http://localhost:3000/saudacao/Cledisvaldo
+###
+POST http://localhost:3000/saudacao
+Content-Type: application/json
+
+{
+    "nome": "josislaine Glaqff Floôr"
+}

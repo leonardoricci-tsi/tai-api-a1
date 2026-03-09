@@ -11,9 +11,20 @@ app.get("/", (Req : Request, res : Response) => {
 
 app.get("/saudacao/:nome",(req: Request, res: Response)=>{
     const nome = req.params.nome;
-    res.send("Olá "+ nome)
+    //res.send("Olá "+ nome)
+    res.json({
+        mensagem: `Ola ${nome}!`
+    });
 
-})
+});
+
+app.post("/saudacao", (req: Request, res: Response)=>{
+    const {nome} = req.body;
+    res.json({
+        mensagem:`Ola ${nome}`
+    });
+
+});
 
 app.listen(PORT,() => {
     console.log("Servidor executando em localhost")
